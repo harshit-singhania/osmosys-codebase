@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact Form</title>
+    <style>
+      :root {
+        --offwhite: #f5f5f5;
+        --black: #333;
+        --beige: #d2b48c;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: "Inter";
+        background-color: var(--offwhite); /* off-white */
+        color: var(--black); /* black */
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        padding: 20px;
+        background-color: var(--offwhite); /* off-white */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: var(--black); /* black */
+      }
+
+      input,
+      textarea {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: var(--offwhite); /* off-white */
+        color: var(--black); /* black */
+      }
+
+      button {
+        padding: 10px;
+        background-color: var(--beige); /* beige */
+        color: var(--black); /* black */
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        display: block;
+        margin: 0 auto;
+        font-family: "Inter";
+      }
+
+      button:hover {
+        background-color: #c0a080; /* darker beige */
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: var(--black); /* black */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Login Form</h1>
+      <form action="/login" method="post" id="loginForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" required />
+        <br />
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" required />
+        <br />
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+        <br />
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" name="mobile" id="mobile" required />
+        <br />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required />
+        <br />
+        <label for="confirmPassword">Confirm Password:</label>
+        <input
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          required
+        />
+        <br />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <script>
+      const form = document.getElementById("loginForm");
+      const submissions = [];
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const firstName = document.getElementById("firstName").value.trim();
+        const lastName = document.getElementById("lastName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const mobile = document.getElementById("mobile").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const confirmPassword = document
+          .getElementById("confirmPassword")
+          .value.trim();
+
+        if (
+          !firstName ||
+          !lastName ||
+          !email ||
+          !mobile ||
+          !password ||
+          !confirmPassword
+        ) {
+          alert("All fields are required.");
+          return;
+        }
+
+        if (!validateEmail(email)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+
+        if (!validateMobile(mobile)) {
+          alert("Please enter a valid 10-digit mobile number.");
+          return;
+        }
+
+        if (password.length < 8) {
+          alert("Password must be at least 8 characters long.");
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match.");
+          return;
+        }
+
+        const submission = {
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          mobile: mobile,
+          password: password,
+        };
+
+        submissions.push(submission);
+
+        alert("Form has been submitted successfully" + firstName.value + " !");
+
+        form.reset();
+
+        console.log(submissions);
+      });
+
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+
+      function validateMobile(mobile) {
+        const re = /^\d{10}$/;
+        return re.test(mobile);
+      }
+    </script>
+  </body>
+</html>
