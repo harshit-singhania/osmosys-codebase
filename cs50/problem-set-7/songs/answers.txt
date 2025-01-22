@@ -1,0 +1,117 @@
+CREATE TABLE songs (
+    id INTEGER PRIMARY KEY,  -- Unique identifier for each song
+    name TEXT NOT NULL,                    -- Name of the song
+    artist_id INTEGER NOT NULL,            -- Foreign key referencing the artist
+    length REAL NOT NULL,                  -- Length of the song in seconds or minutes
+    tempo REAL,                            -- Tempo of the song (in beats per minute)
+    danceability REAL,                     -- Danceability score (range: 0 to 1)
+    energy REAL,                           -- Energy score (range: 0 to 1)
+    valence REAL -- Valence score (range: 0 to 1, happiness level));
+); 
+
+CREATE TABLE artists (
+    id SERIAL PRIMARY KEY,    -- Unique identifier for each artist
+    name TEXT NOT NULL,       -- Name of the artist
+    genre TEXT,               -- Genre of the artist's music
+    debut_year INTEGER,       -- Year when the artist debuted
+    country TEXT              -- Country of origin
+);
+
+
+INSERT INTO songs (id, name, artist_id, length, tempo, danceability, energy, valence) VALUES
+(1, 'Blinding Lights', 1, 200.5, 171, 0.78, 0.82, 0.85),
+(2, 'Circles', 2, 215.3, 120, 0.72, 0.70, 0.80),
+(3, 'Rockstar', 3, 181.2, 160, 0.81, 0.85, 0.77),
+(4, 'Bad Guy', 4, 195.6, 135, 0.76, 0.74, 0.65),
+(5, 'Old Town Road', 5, 157.4, 136, 0.89, 0.84, 0.91),
+(6, 'Sunflower', 2, 158.5, 90, 0.69, 0.67, 0.70),
+(7, 'Lucid Dreams', 6, 239.0, 84, 0.75, 0.71, 0.60),
+(8, 'Sicko Mode', 7, 312.1, 155, 0.83, 0.80, 0.79),
+(9, 'Memories', 8, 187.6, 112, 0.71, 0.66, 0.76),
+(10, 'Levitating', 9, 203.8, 103, 0.80, 0.78, 0.89),
+(11, 'Montero', 10, 176.5, 112, 0.84, 0.79, 0.81),
+(12, 'Peaches', 11, 198.4, 93, 0.74, 0.76, 0.72),
+(13, 'Stay', 12, 141.2, 170, 0.92, 0.91, 0.94),
+(14, 'Save Your Tears', 1, 215.5, 118, 0.79, 0.77, 0.82),
+(15, 'Dynamite', 13, 199.0, 114, 0.87, 0.88, 0.90),
+(16, 'Mood', 14, 140.3, 164, 0.88, 0.83, 0.86),
+(17, 'Goosebumps', 7, 236.7, 129, 0.70, 0.68, 0.75),
+(18, 'Drivers License', 15, 242.0, 144, 0.66, 0.64, 0.58),
+(19, 'Good 4 U', 15, 178.1, 165, 0.93, 0.95, 0.85),
+(20, 'Industry Baby', 10, 215.9, 150, 0.82, 0.80, 0.87),
+(21, 'Laugh Now Cry Later', 16, 260.4, 145, 0.73, 0.70, 0.78),
+(22, 'Positions', 17, 172.5, 90, 0.81, 0.79, 0.83),
+(23, 'The Box', 18, 190.7, 146, 0.76, 0.75, 0.70),
+(24, 'Watermelon Sugar', 19, 178.0, 95, 0.84, 0.82, 0.88),
+(25, 'Shivers', 20, 207.9, 120, 0.85, 0.83, 0.90),
+(26, 'Don’t Start Now', 9, 182.1, 124, 0.88, 0.86, 0.92),
+(27, 'Life Goes On', 13, 185.5, 123, 0.78, 0.75, 0.80),
+(28, 'Blame It on Me', 21, 231.5, 140, 0.72, 0.74, 0.77),
+(29, 'One Dance', 16, 173.3, 150, 0.87, 0.85, 0.91),
+(30, 'Better Now', 2, 231.2, 144, 0.84, 0.81, 0.88);
+
+INSERT INTO artists (name, genre, debut_year, country) VALUES
+('The Weeknd', 'Pop', 2010, 'Canada'),
+('Post Malone', 'Hip-Hop', 2015, 'USA'),
+('DaBaby', 'Hip-Hop', 2015, 'USA'),
+('Billie Eilish', 'Pop', 2015, 'USA'),
+('Lil Nas X', 'Hip-Hop', 2019, 'USA'),
+('Juice WRLD', 'Hip-Hop', 2018, 'USA'),
+('Travis Scott', 'Hip-Hop', 2012, 'USA'),
+('Maroon 5', 'Pop', 2002, 'USA'),
+('Dua Lipa', 'Pop', 2015, 'UK'),
+('Lil Nas X', 'Hip-Hop', 2019, 'USA'),
+('Justin Bieber', 'Pop', 2008, 'Canada'),
+('Kid LAROI', 'Pop', 2019, 'Australia'),
+('BTS', 'K-Pop', 2013, 'South Korea'),
+('24kGoldn', 'Hip-Hop', 2019, 'USA'),
+('Olivia Rodrigo', 'Pop', 2020, 'USA'),
+('Drake', 'Hip-Hop', 2006, 'Canada'),
+('Ariana Grande', 'Pop', 2008, 'USA'),
+('Roddy Ricch', 'Hip-Hop', 2018, 'USA'),
+('Harry Styles', 'Pop', 2017, 'UK'),
+('Ed Sheeran', 'Pop', 2011, 'UK'),
+('J. Cole', 'Hip-Hop', 2007, 'USA'),
+('Kanye West', 'Hip-Hop', 2004, 'USA'),
+('Taylor Swift', 'Pop', 2006, 'USA'),
+('Shawn Mendes', 'Pop', 2014, 'Canada'),
+('Bruno Mars', 'Pop', 2010, 'USA'),
+('Imagine Dragons', 'Rock', 2008, 'USA'),
+('Coldplay', 'Rock', 1996, 'UK'),
+('The Chainsmokers', 'Electronic', 2012, 'USA'),
+('Sia', 'Pop', 1997, 'Australia'),
+('Eminem', 'Hip-Hop', 1996, 'USA');
+
+select * from songs;
+
+select * from artists;
+
+-- q1
+select name from songs; 
+
+-- q2 
+SELECT name FROM songs ORDER BY tempo ASC;
+
+-- q3 
+SELECT name FROM songs ORDER BY length DESC LIMIT 5;
+
+-- q4 
+SELECT name FROM songs WHERE danceability > 0.75 AND energy > 0.75 AND valence > 0.75;
+
+-- q5 
+SELECT AVG(energy) AS average_energy FROM songs;
+
+-- q6 
+SELECT s.name 
+FROM songs s 
+JOIN artists a ON s.artist_id = a.id 
+WHERE a.name = 'Post Malone';
+
+-- q7 
+SELECT AVG(s.energy) AS average_energy 
+FROM songs s 
+JOIN artists a ON s.artist_id = a.id 
+WHERE a.name = 'Drake';
+
+-- q8 
+SELECT name FROM songs WHERE name LIKE '%feat.%';
