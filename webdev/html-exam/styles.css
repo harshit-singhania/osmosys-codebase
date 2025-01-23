@@ -51,6 +51,8 @@ header nav ui li a:hover {
 
 #about img {
     border-radius: 50%; 
-    width: 150px; 
-    height: 150px;
+    width: 30px; 
+    height: 30px; 
+    display: block; 
+    margin: 0 auto;
 }
