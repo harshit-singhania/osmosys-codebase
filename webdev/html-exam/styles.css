@@ -35,7 +35,7 @@ body.dark-mode {
     top: 20px;
     left: 20px; 
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .dark-mode-button:hover {
