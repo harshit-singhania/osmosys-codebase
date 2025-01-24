@@ -1,0 +1,16 @@
+:root {
+    --background-color: #007c9d; 
+}
+
+#searchbar-submit-btn {
+    background-color: var(--background-color) !important;
+    transition: background-color 1s ease-in-out;
+}
+
+#searchbar-submit-btn:hover {
+    background-color: #005f75 !important;
+}
+
+.contact-btn {
+    border-color: var(--background-color) !important;
+}
