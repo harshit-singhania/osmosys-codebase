@@ -5,207 +5,52 @@
     font-family: 'Inter', sans-serif;
 }
 
-/* light mode */
-:root {
-    --primary-color: #CCD5AE;
-    --secondary-color: #E9EDC9;
-    --background-color: #FEFAE0;
-    --text-color: #333;
-}
-
-/* dark mode */
-body.dark-mode {
-    --primary-color: #52796f;
-    --secondary-color: #354f52;
-    --background-color: #2f3e46;
-    --text-color: #fff;
-}
-
-.dark-mode-button {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-    font-weight: bold;
-    position: fixed;
-    top: 20px;
-    left: 20px; 
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-.dark-mode-button:hover {
-    background-color: var(--secondary-color);
-}
-
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-header, nav, .navbar {
-    background-color: var(--primary-color);
-    padding: 1rem;
+    line-height: 1.6; 
+    transition: background-color 0.3s, color, 0.3s;
 }
 
-nav ul {
+header {
+    padding: 1rem; 
+    background-color: #333;
+    color: #fff; 
+    position: sticky; 
+    top: 0;
+    z-index: 1000; 
+}
+
+header nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+header nav ul {
     list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end; 
-    gap: 20px;
+    display: flex; 
+    gap: 1rem;
 }
 
-nav ul li a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 20px;
+header nav ui li a {
+    color: white; 
+    text-decoration: none; 
+    transition: color 0.3s; 
 }
 
-nav ul li a:hover {
-    color: var(--secondary-color);
+header nav ui li a:hover {
+    color: #f39c12; 
 }
 
-
-#about h1 {
-    text-align: center;
-    margin-bottom: 20px;
+.section {
+    padding: 2rem, 1rem;
 }
 
-#about p {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 20px;
+#abouut {
     text-align: center;
 }
 
 #about img {
-    display: block;
-    margin: 0 auto;
-    width: 200px; 
-    height: auto; 
-    border-radius: 10px;
-    margin-top: 20px;
-}
-.section {
-    padding: 2rem;
-    background-color: var(--background-color);
-}
-
-h1, h2, h3 {
-    color: var(--text-color);
-}
-
-#portfolio-heading {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.profile-image img {
+    border-radius: 50%; 
     width: 150px; 
-    height: auto; 
-    border-radius: 30%; 
-}
-
-.portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.portfolio-item {
-    background-color: var(--secondary-color);
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.portfolio-item h3 {
-    color: var(--text-color);
-}
-
-.portfolio-item p {
-    color: var(--text-color);
-}
-
-#contact h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#contact form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: var(--secondary-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#contact label {
-    margin-top: 10px;
-    font-weight: bold;
-    color: var(--text-color);
-}
-
-#contact input,
-#contact textarea {
-    margin-top: 5px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-#contact button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#contact button:hover {
-    background-color: var(--secondary-color);
-}
-
-.filter-buttons {
-    text-align: center; 
-    margin-bottom: 20px;
-}
-
-.filter-buttons button {
-    background-color: var(--primary-color); 
-    color: var(--text-color); 
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-    margin: 0 10px;
-    font-weight: bold;
-}
-
-.filter-buttons button:hover {
-    background-color: var(--secondary-color);
+    height: 150px;
 }
