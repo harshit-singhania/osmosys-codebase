@@ -48,6 +48,14 @@ body {
     }
 }
 
+.logo:visited {
+    color: black; 
+}
+
+#main-text:hover {
+    color: red; 
+}
+
 .nav-menu {
     display: flex;
     gap: 1rem;

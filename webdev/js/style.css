@@ -1,0 +1,136 @@
+:root {
+    --seasalt: #f8f9faff;
+    --antiflash-white: #e9ecefff;
+    --platinum: #dee2e6ff;
+    --french-gray: #ced4daff;
+    --french-gray-2: #adb5bdff;
+    --slate-gray: #6c757dff;
+    --outer-space: #495057ff;
+    --onyx: #343a40ff;
+    --eerie-black: #212529ff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--seasalt);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.todo-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--antiflash-white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+.todo-container h1 {
+    color: var(--onyx);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.todo-container h1 span {
+    color: var(--slate-gray);
+}
+
+#heading:hover {
+    color: var(--outer-space);
+    cursor: pointer;
+}
+
+#task-input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--french-gray);
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+}
+
+#task-input:hover {
+    border-color: var(--french-gray-2);
+}
+
+#task-input:focus {
+    outline: none;
+    border-color: var(--slate-gray);
+}
+
+#add-task-button,
+#clear-all-button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--slate-gray);
+    color: var(--seasalt);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#add-task-button:hover,
+#clear-all-button:hover {
+    background-color: var(--outer-space);
+    transform: scale(1.05);
+}
+
+#clear-all-button {
+    margin-top: 10px;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--french-gray);
+    border-radius: 4px;
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    color: var(--french-gray-2);
+}
+
+.delete-button {
+    background-color: var(--onyx);
+    color: var(--seasalt);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-button:hover,
+.delete-button:hover {
+    background-color: var(--eerie-black);
+}
+
+.edit-button,
+.delete-button {
+    background-color: var(--slate-gray);
+    color: var(--seasalt);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    background-color: var(--outer-space);
+    transform: scale(1.05);
+}

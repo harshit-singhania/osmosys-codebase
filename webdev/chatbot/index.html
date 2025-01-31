@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackbox AI</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        .model-chip {
+            @apply px-3 py-1.5 rounded-lg flex items-center gap-2 hover:bg-gray-100 cursor-pointer text-sm;
+        }
+        .action-button {
+            @apply p-2 hover:bg-gray-100 rounded-lg flex items-center gap-2 text-gray-600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-[Inter]">
+    <!-- Navigation -->
+    <nav class="border-b bg-white">
+        <div class="max-w-[1400px] mx-auto px-4 h-14 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <button class="p-2 hover:bg-gray-100 rounded-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <div class="relative">
+                    <button class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-100 rounded-lg" id="modelSelect">
+                        SELECT MODELS
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#" class="text-sm hover:text-gray-600">About</a>
+                <a href="#" class="text-sm hover:text-gray-600">AI Web IDE</a>
+                <a href="#" class="text-sm hover:text-gray-600">App Builder</a>
+                <a href="#" class="text-sm hover:text-gray-600">Create Agent</a>
+                <button class="bg-black text-white px-4 py-1.5 rounded-lg flex items-center gap-2">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"></path>
+                    </svg>
+                    VSCode
+                </button>
+                <button class="w-8 h-8 rounded-full bg-gray-200"></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-[800px] mx-auto px-4 py-12">
+        <h1 class="text-3xl font-semibold text-center mb-8">Ask Blackbox AI Anything</h1>
+        
+        <!-- Input Area -->
+        <div class="bg-white rounded-xl shadow-sm border">
+            <div class="p-4">
+                <textarea 
+                    class="w-full resize-none outline-none min-h-[100px] text-gray-700" 
+                    placeholder="Message Blackbox or @mention agent"
+                ></textarea>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="border-t p-2 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <button class="action-button">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        Web Search
+                    </button>
+                    <button class="action-button">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                        Reasoning
+                    </button>
+                    <button class="action-button">Models</button>
+                    <button class="action-button">Data Visualisation</button>
+                    <button class="action-button">Domain</button>
+                    <button class="action-button">Upload</button>
+                    <button class="action-button">Customize</button>
+                </div>
+                <button class="p-2 bg-black text-white rounded-lg">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- New Feature Banner -->
+        <div class="mt-4 p-4 bg-white rounded-lg border flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-pink-500">🚀 New:</span>
+                <span class="text-gray-600">Get the Most Advanced Coding Agent directly in VSCode #1 on SWE Bench.</span>
+            </div>
+            <button class="text-gray-400 hover:text-gray-600">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Model Selection -->
+        <div class="mt-4 flex items-center gap-2">
+            <div class="model-chip">
+                <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                DeepSeek-V3
+            </div>
+            <div class="model-chip">
+                <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                DeepSeek-R1
+            </div>
+            <div class="model-chip">
+                <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                Meta-Llama-3.3-70B-Instruct
+            </div>
+            <div class="model-chip">
+                <svg class="w-4 h-4 text-orange-500" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                Mistral-(7B)-Instruct-v0.2
+            </div>
+            <button class="model-chip">More</button>
+        </div>
+    </main>
+
+    <script>
+        // Handle textarea auto-resize
+        const textarea = document.querySelector('textarea');
+        textarea.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        });
+
+        // Handle model select dropdown toggle
+        const modelSelect = document.getElementById('modelSelect');
+        modelSelect.addEventListener('click', function() {
+            // Add dropdown functionality here
+            console.log('Toggle model select dropdown');
+        });
+
+        // Handle banner close
+        const banner = document.querySelector('.banner');
+        const closeButton = banner?.querySelector('button');
+        closeButton?.addEventListener('click', function() {
+            banner.remove();
+        });
+    </script>
+</body>
+</html>
