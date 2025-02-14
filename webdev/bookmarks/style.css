@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lusitana:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    scrollbar-color: var(--eerie-black) var(--onyx);
+    scrollbar-width: thin;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    /* Custom scrollbar styles */
+    a {
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+}
+
+:root {
+    --eerie-black: #18191dff;
+    --eerie-black-2: #1e2020ff;
+    --eerie-black-3: #202123ff;
+    --raisin-black: #202125ff;
+    --raisin-black-2: #1e2020ff;
+    --jet: #282a2cff;
+    --onyx: #3d3f42ff;
+    --onyx-2: #3d4043ff;
+    --jet-2: #3e3b3fff;
+    --jet-3: #403e41ff;
+    --davys-gray: #5b5c5cff;
+    --button-color: white;
+    --text-color: white;
+}
+
+body {
+    background-color: var(--eerie-black);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: var(--eerie-black-2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid var(--onyx);
+    border-radius: 4px;
+    background-color: var(--eerie-black-3);
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--jet-2);
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: var(--jet);
+    color: var(--button-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--jet-2);
+    transform: scale(1.05);
+}
+
+#bookmarks {
+    margin-top: 20px;
+}
+
+#bookmarks h3 {
+    margin-bottom: 10px;
+}
+
+#bookmarksList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#bookmarksList li {
+    padding: 10px;
+    border: 1px solid var(--onyx);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: var(--eerie-black-3);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.bookmark-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid var(--onyx);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: var(--eerie-black-3);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.delete-button {
+    background-color: var(--jet);
+    color: var(--button-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: var(--jet-2);
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let taskInput = document.getElementById("task-input");
   let addTaskButton = document.getElementById("add-task-button");
   let taskList = document.getElementById("task-list");
+  let clearAllButton = document.getElementById("clear-all-button");
 
   let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -65,10 +66,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   clearAllButton.addEventListener("click", function () {
-    tasks = [];
-    saveTasks();
-    renderTasks();
+    // clear all completed tasks
+    taskList.innerHTML = "";
+    localStorage.removeItem("tasks"); 
   });
-
   renderTasks();
+  
 });
