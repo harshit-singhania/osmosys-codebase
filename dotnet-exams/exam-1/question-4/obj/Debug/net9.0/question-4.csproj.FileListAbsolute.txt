@@ -1,0 +1,15 @@
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\bin\Debug\net9.0\question-4.exe
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\bin\Debug\net9.0\question-4.deps.json
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\bin\Debug\net9.0\question-4.runtimeconfig.json
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\bin\Debug\net9.0\question-4.dll
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\bin\Debug\net9.0\question-4.pdb
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\obj\Debug\net9.0\question-4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\obj\Debug\net9.0\question-4.AssemblyInfoInputs.cache
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\obj\Debug\net9.0\question-4.AssemblyInfo.cs
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\obj\Debug\net9.0\question-4.csproj.CoreCompileInputs.cache
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\obj\Debug\net9.0\question-4.sourcelink.json
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\obj\Debug\net9.0\question-4.dll
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\obj\Debug\net9.0\refint\question-4.dll
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\obj\Debug\net9.0\question-4.pdb
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\obj\Debug\net9.0\question-4.genruntimeconfig.cache
+C:\Users\harsh\OneDrive\Documents\osmosys-codebase\dotnet-exams\exam-1\question-4\obj\Debug\net9.0\ref\question-4.dll

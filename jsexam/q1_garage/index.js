@@ -118,8 +118,22 @@ class GarageManagementSystem {
     }
 
     getCarsBetweenDate(fromDate, toDate) {
+
+        if (!fromDate || !toDate) {
+            console.log('please enter a date');
+            return [fromDate, toDate];
+        }
+
+        
+        console.log('abc'); 
+
         const from = new Date(fromDate);
         const to = new Date(toDate);
+
+        if (from > to) {
+            console.log('Enter valid dates'); 
+            return; 
+        }
 
         return Array.from(this.jobs.values()).filter(job => {
             const jobDate = new Date(job.jobDate);
@@ -180,7 +194,7 @@ const carCount = garage.getNumberOfCars("Maruti Alto 2004");
 console.log(`Number of Maruti Alto 2004: ${carCount}`);
 
 // Get cars between dates
-const carsBetweenDates = garage.getCarsBetweenDate("2024-02-01", "2024-02-14");
+const carsBetweenDates = garage.getCarsBetweenDate("2024-02-17", "2024-02-14");
 console.log("Cars serviced between dates:", carsBetweenDates);
 
 // service history of mechanic 1 

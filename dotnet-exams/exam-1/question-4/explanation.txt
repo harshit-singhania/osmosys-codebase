@@ -1,0 +1,4 @@
+ there are 3 ways of passing a value by reference 
+ ref: When the function modifies an existing variable. it is beneficial when swapping values, modifying settings
+ out:	When the function returns multiple values. it is beneficial in cases where we are calculating sum and product, parsing
+ in:	When passing large structs without modifying them it is beneficial to ensure performance optimization for large data

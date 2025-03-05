@@ -1,0 +1,8 @@
+there are several differences between type casting and type conversion, including:
+type casting is the process of converting a variable from one type to another done by the programmer while type conversion 
+is the process of converting a variable from one type to another. Type casting can happen at both compile time and run time, 
+depending on the type of casting being performed. While type conversion can only happen at run time. 
+
+type casting is done generally for the primitive data types, while type conversion can be done for both primitive and non-primitive data types.
+
+it is possible to do type casting in a user defined data type
