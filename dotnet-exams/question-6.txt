@@ -1,0 +1,5 @@
+The major types of projects that are visible in Visual Studio would be-
+
+Console App (.NET) – A command-line application for running backend logic or scripts.
+ASP.NET Core Web API – A RESTful API backend for web and mobile applications.
+Windows Forms App (.NET) – A desktop application with a graphical user interface (GUI).
