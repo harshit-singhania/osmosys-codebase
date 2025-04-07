@@ -1,0 +1,6 @@
+@FastTagTollBooth_HostAddress = http://localhost:5150
+
+GET {{FastTagTollBooth_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
